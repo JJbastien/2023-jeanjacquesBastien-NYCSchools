@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#E2ECEB"
+        app:cardCornerRadius="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <TextView
+                android:id="@+id/sat_score_school_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:textAlignment="center"
+                android:textSize="@dimen/large_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="School Name" />
+
+            <LinearLayout
+                android:id="@+id/sat_scores"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@id/sat_score_school_name"
+                app:layout_constraintStart_toStartOf="@id/sat_score_school_name"
+                app:layout_constraintTop_toBottomOf="@id/sat_score_school_name">
+
+                <TextView
+                    android:id="@+id/sat_score_takers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textStyle="bold"
+                    tools:text="SAT" />
+
+                <TextView
+                    android:id="@+id/sat_score_math"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/default_text_size"
+                    tools:text="Math" />
+
+                <TextView
+                    android:id="@+id/sat_score_reading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/default_text_size"
+                    tools:text="Reading" />
+
+                <TextView
+                    android:id="@+id/sat_score_writing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/default_text_size"
+                    tools:text="Writing" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pb_score_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/sat_score_loading"
+                app:layout_constraintStart_toEndOf="@id/sat_score_loading"
+                app:layout_constraintTop_toTopOf="@id/sat_score_loading" />
+
+            <TextView
+                android:id="@+id/sat_score_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading_score"
+                android:textSize="@dimen/default_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sat_score_school_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/default_text_size"
+                app:layout_constraintStart_toStartOf="@id/sat_scores"
+                app:layout_constraintTop_toBottomOf="@id/sat_scores" />
+
+            <TextView
+                android:id="@+id/sat_score_school_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/default_text_size"
+                app:layout_constraintStart_toStartOf="@id/sat_score_school_email"
+                app:layout_constraintTop_toBottomOf="@id/sat_score_school_email" />
+
+            <TextView
+                android:id="@+id/sat_score_students"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/default_text_size"
+                app:layout_constraintStart_toStartOf="@id/sat_score_school_address"
+                app:layout_constraintTop_toBottomOf="@id/sat_score_school_address" />
+
+            <TextView
+                android:id="@+id/school_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:textAlignment="center"
+                android:textSize="@dimen/default_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sat_score_students" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>
